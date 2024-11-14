@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service # type: ignore
 def scrape_website(website):
     print("Launching Chrome Browser...")
 
-    chrome_driver_path = r"C:\Users\vikra\chromedriver.exe"  # Ensure this path is correct
+    chrome_driver_path = r""  # Ensure this path is correct
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
 
@@ -18,7 +18,7 @@ def scrape_website(website):
         driver.quit()
 
 
-website_url = "https://globalpolybags.com/"
+website_url = ""
 html_content = scrape_website(website_url)
 
 print(html_content)
@@ -27,6 +27,6 @@ def export_to_html_file(html_content, file_name):
         file.write(html_content)
 
 
-export_to_html_file(html_content, 'global_polybags.html')
+export_to_html_file(html_content, '')
 
 print("HTML content exported successfully.")
